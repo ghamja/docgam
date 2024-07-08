@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>병원 진료 예약</title>
+    
+    <!-- 부트스트랩 CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@1.9.6/dist/tailwind.min.css" rel="stylesheet">
+    
+    <!-- SweetAlert2 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/sweetalert2@10.16.7/dist/sweetalert2.min.css" rel="stylesheet">
+    
+    <!-- 사용자 정의 CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-gray-100">
+    <div class="container mx-auto mt-8">
+        <h1 class="text-center text-3xl font-semibold mb-6">병원 진료 예약</h1>
+        
+        <form id="appointmentForm" class="max-w-md mx-auto p-6 bg-white shadow-md rounded-lg">
+            <div class="mb-4">
+                <label for="patientName" class="block text-sm font-medium text-gray-700">환자 성명</label>
+                <input type="text" id="patientName" class="form-input mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-400 focus:ring focus:ring-blue-200 focus:ring-opacity-50" required>
+            </div>
+            <div class="mb-4">
+                <label for="phoneNumber" class="block text-sm font-medium text-gray-700">전화번호</label>
+                <input type="tel" id="phoneNumber" class="form-input mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-400 focus:ring focus:ring-blue-200 focus:ring-opacity-50" required>
+            </div>
+            <div class="mb-4">
+                <label for="appointmentDate" class="block text-sm font-medium text-gray-700">진료 날짜</label>
+                <input type="date" id="appointmentDate" class="form-input mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-400 focus:ring focus:ring-blue-200 focus:ring-opacity-50" required>
+            </div>
+            <div class="mb-4">
+                <label for="appointmentTime" class="block text-sm font-medium text-gray-700">진료 시간</label>
+                <input type="time" id="appointmentTime" class="form-input mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-400 focus:ring focus:ring-blue-200 focus:ring-opacity-50" required>
+            </div>
+            <div class="text-center">
+                <button type="submit" class="btn btn-primary">예약하기</button>
+            </div>
+        </form>
+
+        <div id="successMessage" class="mt-3 alert alert-success" style="display: none;">
+            예약이 성공적으로 완료되었습니다.
+        </div>
+    </div>
+
+    <!-- 부트스트랩 및 SweetAlert2 JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10.16.7/dist/sweetalert2.all.min.js"></script>
+    
+    <!-- 사용자 정의 JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
